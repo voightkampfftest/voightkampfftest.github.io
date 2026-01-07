@@ -35,11 +35,11 @@ function startTypingLoop(lines, cursorLine) {
             cursorLine.classList.add('active');
         }
 
-        // Wait 3 seconds, then reset and restart
+        // Wait 15 seconds, then reset and restart
         setTimeout(() => {
             resetTerminal(lines, cursorLine);
             startTypingLoop(lines, cursorLine);
-        }, 3000);
+        }, 15000); // Reset after 15 seconds for better readability
     });
 }
 
