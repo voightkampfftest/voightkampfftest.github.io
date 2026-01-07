@@ -1,0 +1,22 @@
+/* ================================
+   Main CSS
+   Imports all stylesheets in order
+   ================================ */
+
+/* 1. Design System - CSS Variables */
+@import url('variables.css');
+
+/* 2. Reset - Browser normalization */
+@import url('reset.css');
+
+/* 3. Base - Typography and common elements */
+@import url('base.css');
+
+/* 4. Layout - Grid/flexbox layouts (to be created in Phase 2) */
+/* @import url('layout.css'); */
+
+/* 5. Components - Reusable components (to be created in Phase 2) */
+/* @import url('components.css'); */
+
+/* 6. Sections - Section-specific styles (to be created in Phase 3) */
+/* @import url('sections.css'); */
