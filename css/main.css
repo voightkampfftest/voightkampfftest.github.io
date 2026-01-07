@@ -12,11 +12,11 @@
 /* 3. Base - Typography and common elements */
 @import url('base.css');
 
-/* 4. Layout - Grid/flexbox layouts (to be created in Phase 2) */
-/* @import url('layout.css'); */
+/* 4. Layout - Grid/flexbox layouts */
+@import url('layout.css');
 
-/* 5. Components - Reusable components (to be created in Phase 2) */
-/* @import url('components.css'); */
+/* 5. Components - Reusable components */
+@import url('components.css');
 
 /* 6. Sections - Section-specific styles (to be created in Phase 3) */
 /* @import url('sections.css'); */

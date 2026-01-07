@@ -1,0 +1,171 @@
+/* ================================
+   Layout System
+   Containers, Grid, Flexbox utilities
+   ================================ */
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+/* Mobile: Full width with padding */
+@media (max-width: 767px) {
+    .container {
+        padding: 0 var(--space-md);
+    }
+}
+
+/* Tablet: Slightly more padding */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        padding: 0 var(--space-xl);
+    }
+}
+
+/* Desktop: Container constraint */
+@media (min-width: 1024px) {
+    .container {
+        padding: 0 var(--space-2xl);
+    }
+}
+
+
+/* ===== Section Spacing ===== */
+
+.section {
+    padding: var(--space-4xl) 0;
+}
+
+@media (max-width: 767px) {
+    .section {
+        padding: var(--space-3xl) 0;
+    }
+}
+
+
+/* ===== Grid System ===== */
+
+.grid {
+    display: grid;
+    gap: var(--space-xl);
+}
+
+/* 2 columns */
+.grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* 3 columns */
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* 4 columns */
+.grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* Responsive grid - stacks on mobile */
+@media (max-width: 767px) {
+    .grid-2,
+    .grid-3,
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tablet: 2 columns max */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .grid-3,
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* ===== Flexbox Utilities ===== */
+
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-gap-sm {
+    gap: var(--space-sm);
+}
+
+.flex-gap-md {
+    gap: var(--space-md);
+}
+
+.flex-gap-lg {
+    gap: var(--space-lg);
+}
+
+
+/* ===== Spacing Utilities ===== */
+
+.mt-sm { margin-top: var(--space-sm); }
+.mt-md { margin-top: var(--space-md); }
+.mt-lg { margin-top: var(--space-lg); }
+.mt-xl { margin-top: var(--space-xl); }
+.mt-2xl { margin-top: var(--space-2xl); }
+
+.mb-sm { margin-bottom: var(--space-sm); }
+.mb-md { margin-bottom: var(--space-md); }
+.mb-lg { margin-bottom: var(--space-lg); }
+.mb-xl { margin-bottom: var(--space-xl); }
+.mb-2xl { margin-bottom: var(--space-2xl); }
+
+
+/* ===== Section Title Component ===== */
+
+.section-title {
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--space-2xl);
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-md);
+}
+
+.section-title .title-prefix {
+    font-family: var(--font-mono);
+    font-size: var(--font-size-lg);
+    color: var(--color-accent-primary);
+    font-weight: var(--font-weight-regular);
+}
+
+@media (max-width: 767px) {
+    .section-title {
+        font-size: var(--font-size-3xl);
+        margin-bottom: var(--space-xl);
+    }
+
+    .section-title .title-prefix {
+        font-size: var(--font-size-base);
+    }
+}
