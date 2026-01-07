@@ -6,10 +6,12 @@
 import { initNavigation } from './navigation.js';
 import { initAnimations } from './animations.js';
 import { initI18n } from './i18n.js';
+import { initTheme } from './theme.js';
 
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    initI18n();        // Initialize first (sets language before other modules)
+    initTheme();       // Initialize first (apply theme before rendering)
+    initI18n();        // Initialize second (sets language before other modules)
     initNavigation();
     initAnimations();
 

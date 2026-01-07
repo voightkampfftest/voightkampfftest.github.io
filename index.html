@@ -18,7 +18,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Syne:wght@700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/main.css">
@@ -29,7 +29,12 @@
         <div class="container">
             <a href="#" class="logo" data-i18n-aria="aria.home" aria-label="Sebastian Gorski Portfolio - Strona główna">SG</a>
 
-            <button class="lang-toggle" aria-label="Switch language">PL</button>
+            <div class="nav-controls">
+                <button class="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+                    <span class="theme-icon">☀</span>
+                </button>
+                <button class="lang-toggle" aria-label="Switch language">PL</button>
+            </div>
 
             <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
                 <span class="hamburger"></span>
@@ -49,32 +54,19 @@
     <main>
         <!-- Hero Section -->
         <header class="hero" id="hero">
-            <div class="container">
+            <div class="hero-grid">
+                <div class="hero-accent-line"></div>
                 <div class="hero-content">
-                    <!-- Terminal Window -->
-                    <div class="terminal-window">
-                        <div class="terminal-header">
-                            <span class="dot dot-red"></span>
-                            <span class="dot dot-yellow"></span>
-                            <span class="dot dot-green"></span>
-                        </div>
-                        <div class="terminal-body">
-                            <p class="terminal-line">
-                                <span class="prompt">$</span>
-                                <span class="command">whoami</span>
-                            </p>
-                            <p class="terminal-line typing-line" data-text="Sebastian Gorski"></p>
-                            <p class="terminal-line typing-line" data-i18n="hero.subtitle" data-text="Entuzjasta Linuksa | Tester ISTQB | Inżynier Sieci | Budowniczy Homelab"></p>
-                            <p class="terminal-line cursor-line"></p>
-                        </div>
-                    </div>
-
-                    <!-- CTA Buttons -->
-                    <div class="hero-cta">
-                        <a href="#projects" class="btn btn-primary" data-i18n="buttons.viewProjects">Zobacz projekty</a>
-                        <a href="#contact" class="btn btn-secondary" data-i18n="buttons.contact">Kontakt</a>
+                    <h1 class="hero-title">
+                        <span class="hero-title-line hero-title-first">Sebastian</span>
+                        <span class="hero-title-line hero-title-last">Gorski</span>
+                    </h1>
+                    <div class="hero-meta">
+                        <span class="hero-index">001</span>
+                        <span class="hero-location" data-i18n="hero.location">Warsaw, PL</span>
                     </div>
                 </div>
+                <div class="hero-frame"></div>
             </div>
         </header>
 

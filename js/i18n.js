@@ -14,7 +14,8 @@ const translations = {
             contact: 'Kontakt'
         },
         hero: {
-            subtitle: 'Entuzjasta Linuksa | Tester ISTQB | Inżynier Sieci | Budowniczy Homelab'
+            subtitle: 'Entuzjasta Linuksa | Tester ISTQB | Inżynier Sieci | Budowniczy Homelab',
+            location: 'Warsaw, PL'
         },
         buttons: {
             viewProjects: 'Zobacz projekty',
@@ -34,7 +35,8 @@ const translations = {
             contact: 'Contact'
         },
         hero: {
-            subtitle: 'Linux Enthusiast | ISTQB Tester | Network Engineer | Homelab Builder'
+            subtitle: 'Linux Enthusiast | ISTQB Tester | Network Engineer | Homelab Builder',
+            location: 'Warsaw, PL'
         },
         buttons: {
             viewProjects: 'View Projects',

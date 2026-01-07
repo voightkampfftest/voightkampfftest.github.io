@@ -108,3 +108,37 @@
     --breakpoint-lg: 1024px;
     --breakpoint-xl: 1280px;
 }
+
+/* ================================
+   Light Mode Theme
+   ================================ */
+
+:root[data-theme="light"] {
+    /* Background Colors */
+    --color-bg-primary: #ffffff;
+    --color-bg-secondary: #f8f9fa;
+    --color-bg-tertiary: #e9ecef;
+
+    /* Text Colors */
+    --color-text-primary: #1a1a1a;
+    --color-text-secondary: #4a4a4a;
+    --color-text-muted: #6c757d;
+
+    /* Accent Colors */
+    --color-accent-primary: #0066cc;
+    --color-accent-secondary: #6c2bd9;
+    --color-accent-tertiary: #059669;
+    --color-accent-warning: #d97706;
+
+    /* Semantic Colors */
+    --color-link: var(--color-accent-primary);
+    --color-link-hover: #0052a3;
+    --color-border: #dee2e6;
+    --color-code-bg: #f1f3f5;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --shadow-glow: 0 0 20px rgba(0, 102, 204, 0.15);
+}
