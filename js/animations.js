@@ -9,38 +9,61 @@ export function initAnimations() {
     console.log('Animations initialized ✓');
 }
 
-// ===== Typing Effect =====
+// ===== Typing Effect with Loop =====
 function initTypingEffect() {
     const typingLines = document.querySelectorAll('.typing-line');
+    const cursorLine = document.querySelector('.cursor-line');
 
     if (typingLines.length === 0) return;
 
     // Start typing after initial fade-in
     setTimeout(() => {
-        typeLines(typingLines, 0);
+        startTypingLoop(typingLines, cursorLine);
     }, 1000); // Wait for hero fade-in animation
 }
 
-function typeLines(lines, index) {
-    if (index >= lines.length) return;
+function startTypingLoop(lines, cursorLine) {
+    // Type all lines
+    typeLines(lines, 0, () => {
+        // All lines typed, show cursor below
+        if (cursorLine) {
+            cursorLine.classList.add('active');
+        }
+
+        // Wait 3 seconds, then reset and restart
+        setTimeout(() => {
+            resetTerminal(lines, cursorLine);
+            startTypingLoop(lines, cursorLine);
+        }, 3000);
+    });
+}
+
+function typeLines(lines, index, onComplete) {
+    if (index >= lines.length) {
+        // All lines done
+        if (onComplete) onComplete();
+        return;
+    }
 
     const line = lines[index];
     const text = line.getAttribute('data-text');
 
     if (!text) {
         // Skip to next line if no text
-        typeLines(lines, index + 1);
+        typeLines(lines, index + 1, onComplete);
         return;
     }
 
+    // Show the line and start typing
     line.classList.add('typing');
     typeLine(line, text, 0, () => {
+        // Typing complete for this line
         line.classList.add('done');
         line.classList.remove('typing');
 
         // Delay before next line
         setTimeout(() => {
-            typeLines(lines, index + 1);
+            typeLines(lines, index + 1, onComplete);
         }, 500);
     });
 }
@@ -56,6 +79,19 @@ function typeLine(element, text, charIndex, callback) {
         // Typing complete
         callback();
     }
+}
+
+function resetTerminal(lines, cursorLine) {
+    // Hide cursor line
+    if (cursorLine) {
+        cursorLine.classList.remove('active');
+    }
+
+    // Clear all lines
+    lines.forEach(line => {
+        line.textContent = '';
+        line.classList.remove('typing', 'done');
+    });
 }
 
 // ===== Scroll Reveal Animation (for future sections) =====

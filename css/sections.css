@@ -108,7 +108,7 @@
     opacity: 1;
 }
 
-/* Blinking cursor */
+/* Blinking cursor for typing lines */
 .typing-line::after {
     content: '▊';
     color: var(--color-accent-primary);
@@ -118,6 +118,22 @@
 
 .typing-line.done::after {
     display: none;
+}
+
+/* Cursor line (empty line with blinking cursor below text) */
+.cursor-line {
+    opacity: 0;
+    min-height: 1.6em;
+}
+
+.cursor-line.active {
+    opacity: 1;
+}
+
+.cursor-line.active::after {
+    content: '▊';
+    color: var(--color-accent-primary);
+    animation: blink 0.7s infinite;
 }
 
 @keyframes blink {
