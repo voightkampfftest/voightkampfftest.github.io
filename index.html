@@ -27,18 +27,20 @@
     <!-- Navigation -->
     <nav class="nav" id="main-nav">
         <div class="container">
-            <a href="#" class="logo" aria-label="Sebastian Gorski Portfolio - Strona główna">SG</a>
+            <a href="#" class="logo" data-i18n-aria="aria.home" aria-label="Sebastian Gorski Portfolio - Strona główna">SG</a>
+
+            <button class="lang-toggle btn-icon" aria-label="Switch language">PL</button>
 
             <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
                 <span class="hamburger"></span>
             </button>
 
             <ul class="nav-menu" role="list">
-                <li><a href="#about" class="nav-link">O mnie</a></li>
-                <li><a href="#skills" class="nav-link">Umiejętności</a></li>
-                <li><a href="#projects" class="nav-link">Projekty</a></li>
-                <li><a href="#blog" class="nav-link">Blog</a></li>
-                <li><a href="#contact" class="nav-link">Kontakt</a></li>
+                <li><a href="#about" class="nav-link" data-i18n="nav.about">O mnie</a></li>
+                <li><a href="#skills" class="nav-link" data-i18n="nav.skills">Umiejętności</a></li>
+                <li><a href="#projects" class="nav-link" data-i18n="nav.projects">Projekty</a></li>
+                <li><a href="#blog" class="nav-link" data-i18n="nav.blog">Blog</a></li>
+                <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Kontakt</a></li>
             </ul>
         </div>
     </nav>
@@ -62,15 +64,15 @@
                                 <span class="command">whoami</span>
                             </p>
                             <p class="terminal-line typing-line" data-text="Sebastian Gorski"></p>
-                            <p class="terminal-line typing-line" data-text="Linux Enthusiast | ISTQB Tester | Network Engineer | Homelab Builder"></p>
+                            <p class="terminal-line typing-line" data-i18n="hero.subtitle" data-text="Entuzjasta Linuksa | Tester ISTQB | Inżynier Sieci | Budowniczy Homelab"></p>
                             <p class="terminal-line cursor-line"></p>
                         </div>
                     </div>
 
                     <!-- CTA Buttons -->
                     <div class="hero-cta">
-                        <a href="#projects" class="btn btn-primary">Zobacz projekty</a>
-                        <a href="#contact" class="btn btn-secondary">Kontakt</a>
+                        <a href="#projects" class="btn btn-primary" data-i18n="buttons.viewProjects">Zobacz projekty</a>
+                        <a href="#contact" class="btn btn-secondary" data-i18n="buttons.contact">Kontakt</a>
                     </div>
                 </div>
             </div>

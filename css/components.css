@@ -202,6 +202,49 @@
     border-radius: var(--border-radius-sm);
 }
 
+/* Language Toggle */
+.lang-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 40px;
+    font-family: var(--font-mono);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+    background: transparent;
+    border: 2px solid var(--color-border);
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.lang-toggle:hover {
+    color: var(--color-accent-primary);
+    border-color: var(--color-accent-primary);
+    background: rgba(0, 217, 255, 0.1);
+}
+
+.lang-toggle:focus-visible {
+    outline: 2px solid var(--color-accent-primary);
+    outline-offset: 4px;
+}
+
+/* Position in nav - add gap for spacing */
+.nav .container {
+    gap: var(--space-lg);
+}
+
+/* Mobile positioning */
+@media (max-width: 767px) {
+    .lang-toggle {
+        width: 44px;
+        height: 36px;
+        font-size: var(--font-size-xs);
+    }
+}
+
 
 /* ===== Buttons ===== */
 

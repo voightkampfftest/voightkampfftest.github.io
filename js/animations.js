@@ -6,6 +6,11 @@
 export function initAnimations() {
     initTypingEffect();
 
+    // Listen for language changes and restart animation
+    window.addEventListener('languageChanged', () => {
+        restartTypingAnimation();
+    });
+
     console.log('Animations initialized ✓');
 }
 
@@ -92,6 +97,22 @@ function resetTerminal(lines, cursorLine) {
         line.textContent = '';
         line.classList.remove('typing', 'done');
     });
+}
+
+// ===== Restart Typing Animation (for language changes) =====
+function restartTypingAnimation() {
+    const typingLines = document.querySelectorAll('.typing-line');
+    const cursorLine = document.querySelector('.cursor-line');
+
+    if (typingLines.length === 0) return;
+
+    // Reset terminal
+    resetTerminal(typingLines, cursorLine);
+
+    // Restart typing after short delay
+    setTimeout(() => {
+        startTypingLoop(typingLines, cursorLine);
+    }, 500);
 }
 
 // ===== Scroll Reveal Animation (for future sections) =====
