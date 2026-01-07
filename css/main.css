@@ -18,5 +18,5 @@
 /* 5. Components - Reusable components */
 @import url('components.css');
 
-/* 6. Sections - Section-specific styles (to be created in Phase 3) */
-/* @import url('sections.css'); */
+/* 6. Sections - Section-specific styles */
+@import url('sections.css');
