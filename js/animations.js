@@ -92,10 +92,11 @@ function resetTerminal(lines, cursorLine) {
         cursorLine.classList.remove('active');
     }
 
-    // Clear all lines
+    // Clear all lines but keep .done class to maintain visibility
     lines.forEach(line => {
         line.textContent = '';
-        line.classList.remove('typing', 'done');
+        line.classList.remove('typing');
+        // Keep .done class to maintain opacity: 1 during reset
     });
 }
 

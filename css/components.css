@@ -220,8 +220,8 @@
 
     /* Colors */
     color: var(--color-accent-primary);
-    background: rgba(0, 217, 255, 0.03);
-    border: 1px solid rgba(0, 217, 255, 0.3);
+    background: rgba(0, 217, 255, 0.08);  /* Increased from 0.03 for visibility */
+    border: 1px solid rgba(0, 217, 255, 0.5);  /* Increased from 0.3 for visibility */
 
     /* Shape - sharp terminal edges */
     border-radius: 0;
@@ -238,8 +238,8 @@
 
     /* Effects */
     box-shadow:
-        0 0 10px rgba(0, 217, 255, 0.1),
-        inset 0 1px 0 rgba(0, 217, 255, 0.1);
+        0 0 15px rgba(0, 217, 255, 0.2),  /* Increased intensity and spread */
+        inset 0 1px 0 rgba(0, 217, 255, 0.15);  /* Increased intensity */
 
     /* Remove defaults */
     outline: none;
@@ -252,13 +252,13 @@
 /* Terminal bracket notation */
 .lang-toggle::before {
     content: '[';
-    opacity: 0.6;
+    opacity: 0.9;  /* Increased from 0.6 for better visibility */
     transition: opacity 0.25s ease;
 }
 
 .lang-toggle::after {
     content: ']';
-    opacity: 0.6;
+    opacity: 0.9;  /* Increased from 0.6 for better visibility */
     transition: opacity 0.25s ease;
 }
 
