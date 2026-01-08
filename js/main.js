@@ -7,6 +7,7 @@ import { initNavigation } from './navigation.js';
 import { initAnimations } from './animations.js';
 import { initI18n } from './i18n.js';
 import { initTheme } from './theme.js';
+import { initParallax } from './parallax.js';
 
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
@@ -14,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initI18n();        // Initialize second (sets language before other modules)
     initNavigation();
     initAnimations();
+    initParallax();    // Initialize parallax effect
 
     console.log('Portfolio initialized successfully! 🚀');
 });
