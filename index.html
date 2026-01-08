@@ -42,9 +42,8 @@
 
             <ul class="nav-menu" role="list">
                 <li><a href="#about" class="nav-link" data-i18n="nav.about">O mnie</a></li>
-                <li><a href="#skills" class="nav-link" data-i18n="nav.skills">Umiejętności</a></li>
+                <li><a href="#services" class="nav-link" data-i18n="nav.services">Usługi</a></li>
                 <li><a href="#projects" class="nav-link" data-i18n="nav.projects">Projekty</a></li>
-                <li><a href="#blog" class="nav-link" data-i18n="nav.blog">Blog</a></li>
                 <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Kontakt</a></li>
             </ul>
         </div>
@@ -70,14 +69,179 @@
             </div>
         </header>
 
-        <!-- About Section (Phase 4) -->
+        <!-- About Section -->
         <section class="section about" id="about">
-            <!-- About content will be added in Phase 4 -->
+            <div class="container">
+                <div class="about-grid">
+                    <!-- Main Content -->
+                    <div class="about-content">
+                        <h2 class="section-title" data-i18n="about.title">Od analizy technologii do budowania rozwiązań</h2>
+
+                        <div class="about-text">
+                            <p class="about-hook" data-i18n="about.hook">
+                                Przez 20 lat zadawałem pytania o technologie. Dziś buduję odpowiedzi.
+                            </p>
+
+                            <p data-i18n="about.paragraph1">
+                                Jako dziennikarz technologiczny (ONET, Gazety.pl, PAP, chip.pl) przekładałem złożone systemy na zrozumiały język. W zespole FakeHunter PAP weryfikowałem fakty, ucząc się metodycznego myślenia i dbałości o szczegóły. Ale pisanie o rozwiązaniach przestało mi wystarczać – chciałem je tworzyć.
+                            </p>
+
+                            <p data-i18n="about.paragraph2">
+                                Dlatego zanurzyłem się w praktykę. Zbudowałem infrastrukturę na Proxmox. Automatyzuję procesy przez N8N. Przygotowuję się do ISTQB. Codziennie używam narzędzi AI (Claude, NotebookLM, Gemini) nie jako recenzent, ale jako twórca – do rozwiązywania realnych problemów biznesowych.
+                            </p>
+
+                            <p data-i18n="about.paragraph3">
+                                To połączenie analitycznego myślenia dziennikarza z praktycznymi umiejętnościami developera daje mi unikalną perspektywę. Rozumiem zarówno "dlaczego" (biznesową potrzebę), jak i "jak" (techniczną realizację). Testuję aplikacje mobilne. Konfiguruję usługi na własnych serwerach. Tworzę treści dla Fundacji Nauka. To Lubię i Builder Polska.
+                            </p>
+
+                            <p data-i18n="about.paragraph4">
+                                Szukam projektów, gdzie ta hybryda umiejętności ma sens: od badania produktów po dokumentację techniczną, od automatyzacji testów po wdrażanie rozwiązań AI.
+                            </p>
+                        </div>
+
+                        <a href="#contact" class="about-cta" data-i18n="about.cta">Pracujmy razem →</a>
+                    </div>
+
+                    <!-- Info Card -->
+                    <aside class="about-info">
+                        <div class="info-card">
+                            <div class="info-item">
+                                <span class="info-label" data-i18n="about.info.experience.label">Doświadczenie</span>
+                                <span class="info-value" data-i18n="about.info.experience.value">20+ lat w tech media</span>
+                            </div>
+
+                            <div class="info-item">
+                                <span class="info-label" data-i18n="about.info.focus.label">Focus</span>
+                                <span class="info-value" data-i18n="about.info.focus.value">AI Automation • QA Testing • Linux Infrastructure</span>
+                            </div>
+
+                            <div class="info-item">
+                                <span class="info-label" data-i18n="about.info.certifications.label">Certyfikaty</span>
+                                <span class="info-value" data-i18n="about.info.certifications.value">Google IT Support • AIDEAS AI • ISTQB (przygotowanie)</span>
+                            </div>
+
+                            <div class="info-item">
+                                <span class="info-label" data-i18n="about.info.location.label">Lokalizacja</span>
+                                <span class="info-value" data-i18n="about.info.location.value">Warsaw, Poland • Remote</span>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
         </section>
 
-        <!-- Skills Section (Phase 4) -->
-        <section class="section skills" id="skills">
-            <!-- Skills content will be added in Phase 4 -->
+        <!-- Services Section -->
+        <section class="section services" id="services">
+            <div class="container">
+                <h2 class="section-title services-title" data-i18n="services.title">Co oferuję</h2>
+                <p class="services-intro" data-i18n="services.intro">
+                    Łączę analityczne myślenie dziennikarza z praktycznymi umiejętnościami developera. Specjalizuję się w trzech obszarach:
+                </p>
+
+                <div class="services-grid">
+                    <!-- Service 1: AI Automation -->
+                    <article class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 64 64" class="icon-ai-flow" xmlns="http://www.w3.org/2000/svg">
+                                <rect class="flow-grid" x="8" y="8" width="14" height="14"/>
+                                <rect class="flow-grid" x="42" y="8" width="14" height="14"/>
+                                <rect class="flow-grid" x="8" y="42" width="14" height="14"/>
+                                <rect class="flow-grid" x="42" y="42" width="14" height="14"/>
+                                <path class="flow-grid" d="M 22 15 L 42 15"/>
+                                <path class="flow-grid" d="M 15 22 L 15 42"/>
+                                <path class="flow-grid" d="M 49 22 L 49 42"/>
+                                <path class="flow-grid" d="M 22 49 L 42 49"/>
+                                <rect class="flow-node" x="28" y="28" width="8" height="8"/>
+                                <path class="flow-accent" d="M 15 15 L 32 32 M 32 32 L 49 15 M 32 32 L 49 49 M 32 32 L 15 49"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-title" data-i18n="services.ai.title">AI Automation & Workflow Engineering</h3>
+                        <p class="service-description" data-i18n="services.ai.description">
+                            Automatyzuję procesy biznesowe używając N8N i narzędzi GenAI. Buduję workflow, które oszczędzają czas i redukują manualne zadania. Od integracji API po content workflows – pomagam firmom wykorzystać AI w praktyce.
+                        </p>
+                        <div class="service-tech">
+                            <span class="tech-label" data-i18n="services.tech">Tech Stack:</span>
+                            <div class="tech-pills">
+                                <span class="tech-pill">N8N</span>
+                                <span class="tech-pill">Claude API</span>
+                                <span class="tech-pill">OpenAI</span>
+                                <span class="tech-pill">Python</span>
+                                <span class="tech-pill">Make.com</span>
+                            </div>
+                        </div>
+                        <p class="service-example" data-i18n="services.ai.example">
+                            <strong>Use case:</strong> Automatyzacja content workflow z AI-powered research i generowaniem treści.
+                        </p>
+                    </article>
+
+                    <!-- Service 2: QA Testing -->
+                    <article class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 64 64" class="icon-qa-layers" xmlns="http://www.w3.org/2000/svg">
+                                <rect class="inspection-frame" x="8" y="8" width="48" height="48"/>
+                                <rect class="inspection-frame" x="16" y="16" width="32" height="32"/>
+                                <rect class="inspection-frame" x="24" y="24" width="16" height="16"/>
+                                <rect class="inspection-target" x="30" y="30" width="4" height="4"/>
+                                <path class="inspection-check" d="M 44 20 L 50 26 L 56 14"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-title" data-i18n="services.qa.title">QA & Mobile Testing</h3>
+                        <p class="service-description" data-i18n="services.qa.description">
+                            Testuję aplikacje mobilne (Android/iOS) z metodycznym podejściem wypracowanym w fact-checkingu PAP. Przygotowuję strategię testów według standardów ISTQB, dokumentuję błędy i buduję procesy QA dla startupów.
+                        </p>
+                        <div class="service-tech">
+                            <span class="tech-label" data-i18n="services.tech">Tech Stack:</span>
+                            <div class="tech-pills">
+                                <span class="tech-pill">ISTQB</span>
+                                <span class="tech-pill">Android Testing</span>
+                                <span class="tech-pill">iOS Testing</span>
+                                <span class="tech-pill">Test Cases</span>
+                                <span class="tech-pill">Bug Tracking</span>
+                            </div>
+                        </div>
+                        <p class="service-example" data-i18n="services.qa.example">
+                            <strong>Use case:</strong> Kompleksowe testy mobilne przed launch – od test case design po final QA report.
+                        </p>
+                    </article>
+
+                    <!-- Service 3: Linux Infrastructure -->
+                    <article class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 64 64" class="icon-linux-stack" xmlns="http://www.w3.org/2000/svg">
+                                <rect class="server-layer" x="8" y="10" width="48" height="12"/>
+                                <rect class="server-layer" x="8" y="26" width="48" height="12"/>
+                                <rect class="server-layer" x="8" y="42" width="48" height="12"/>
+                                <rect class="server-terminal" x="12" y="14" width="4" height="4"/>
+                                <rect class="server-terminal" x="20" y="14" width="4" height="4"/>
+                                <rect class="server-terminal" x="12" y="30" width="4" height="4"/>
+                                <rect class="server-terminal" x="20" y="30" width="4" height="4"/>
+                                <rect class="server-terminal" x="12" y="46" width="4" height="4"/>
+                                <rect class="server-terminal" x="20" y="46" width="4" height="4"/>
+                                <rect class="server-active" x="48" y="14" width="4" height="4"/>
+                                <rect class="server-active" x="48" y="30" width="4" height="4"/>
+                                <rect class="server-active" x="48" y="46" width="4" height="4"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-title" data-i18n="services.linux.title">Linux & Self-Hosting Infrastructure</h3>
+                        <p class="service-description" data-i18n="services.linux.description">
+                            Buduję infrastrukturę na Proxmox z wirtualizacją i konteneryzacją. Konfiguruję self-hosted services bez kosztów chmury. Pomagam małym firmom i homelab enthusiasts w deploymencie własnych serwerów.
+                        </p>
+                        <div class="service-tech">
+                            <span class="tech-label" data-i18n="services.tech">Tech Stack:</span>
+                            <div class="tech-pills">
+                                <span class="tech-pill">Proxmox</span>
+                                <span class="tech-pill">Docker</span>
+                                <span class="tech-pill">Linux</span>
+                                <span class="tech-pill">Networking</span>
+                                <span class="tech-pill">Self-hosting</span>
+                            </div>
+                        </div>
+                        <p class="service-example" data-i18n="services.linux.example">
+                            <strong>Use case:</strong> Setup Proxmox homelab z kontenerami (NGINX, Immich, N8N) i zarządzanie infrastrukturą.
+                        </p>
+                    </article>
+                </div>
+            </div>
         </section>
 
         <!-- Projects Section (Phase 5) -->
