@@ -43,6 +43,21 @@ const translations = {
                 }
             }
         },
+        projects: {
+            title: 'Projekty',
+            intro: 'Wybrane realizacje pokazujące moje podejście do rozwiązywania problemów.',
+            portfolio: {
+                description: 'Autorskie portfolio zbudowane od podstaw. Minimalistyczny design z efektem parallax, responsywność i dbałość o detale.',
+                aboutHeading: 'O projekcie',
+                aboutText: 'Strona portfolio zaprojektowana i zakodowana samodzielnie, bez użycia frameworków CSS. Kluczowe założenia: minimalizm, wydajność i dostępność.',
+                featuresHeading: 'Funkcjonalności',
+                feature1: 'Efekt parallax reagujący na ruch myszy',
+                feature2: 'Pełna responsywność (mobile-first)',
+                feature3: 'Przełącznik języka PL/EN',
+                feature4: 'Animacje CSS bez bibliotek',
+                feature5: 'Optymalizacja pod SEO'
+            }
+        },
         services: {
             title: 'Co oferuję',
             intro: 'Łączę analityczne myślenie dziennikarza z praktycznymi umiejętnościami developera. Specjalizuję się w trzech obszarach:',
@@ -108,6 +123,21 @@ const translations = {
                     label: 'Location',
                     value: 'Warsaw, Poland • Remote'
                 }
+            }
+        },
+        projects: {
+            title: 'Projects',
+            intro: 'Selected works showcasing my approach to problem-solving.',
+            portfolio: {
+                description: 'Custom portfolio built from scratch. Minimalist design with parallax effect, responsiveness and attention to detail.',
+                aboutHeading: 'About the project',
+                aboutText: 'Portfolio website designed and coded independently, without CSS frameworks. Key principles: minimalism, performance and accessibility.',
+                featuresHeading: 'Features',
+                feature1: 'Parallax effect responding to mouse movement',
+                feature2: 'Fully responsive (mobile-first)',
+                feature3: 'Language switcher PL/EN',
+                feature4: 'CSS animations without libraries',
+                feature5: 'SEO optimization'
             }
         },
         services: {
