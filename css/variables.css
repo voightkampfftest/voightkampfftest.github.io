@@ -1,112 +1,54 @@
 /* ================================
    Design System - CSS Variables
-   Dark Mode Tech Theme
+   Book-style Typography Theme
    ================================ */
 
 :root {
-    /* ===== Color Palette - Dark Mode Tech ===== */
-
-    /* Background Colors */
-    --color-bg-primary: #0a0e27;        /* Deep space blue - main background */
-    --color-bg-secondary: #151a2f;      /* Darker slate - nav, footer */
-    --color-bg-tertiary: #1e2438;       /* Card blue - cards, sections */
-
-    /* Text Colors */
-    --color-text-primary: #e6e6e6;      /* Almost white - headings, main text */
-    --color-text-secondary: #a8a8b3;    /* Light gray - body text */
-    --color-text-muted: #6c6c7a;        /* Gray - metadata, captions */
-
-    /* Accent Colors */
-    --color-accent-primary: #00d9ff;    /* Cyan - Linux/terminal feel */
-    --color-accent-secondary: #7c3aed;  /* Purple - tech/AI theme */
-    --color-accent-tertiary: #10b981;   /* Green - success/active state */
-    --color-accent-warning: #f59e0b;    /* Orange - important notices, CTAs */
-
-    /* Semantic Colors */
-    --color-link: var(--color-accent-primary);
-    --color-link-hover: #33e1ff;
-    --color-border: #2a2e42;
-    --color-code-bg: #1a1e30;
-
-
     /* ===== Typography ===== */
 
-    /* Font Families */
-    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    --font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
-    --font-heading: 'Space Grotesk', var(--font-primary);
+    /* System Font Stack (0KB loading) */
+    --font-primary: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    --font-mono: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, monospace;
 
-    /* Font Sizes */
-    --font-size-xs: 0.75rem;      /* 12px */
-    --font-size-sm: 0.875rem;     /* 14px */
-    --font-size-base: 1rem;       /* 16px */
-    --font-size-lg: 1.125rem;     /* 18px */
-    --font-size-xl: 1.25rem;      /* 20px */
-    --font-size-2xl: 1.5rem;      /* 24px */
-    --font-size-3xl: 1.875rem;    /* 30px */
-    --font-size-4xl: 2.25rem;     /* 36px */
-    --font-size-5xl: 3rem;        /* 48px */
-
-    /* Font Weights */
-    --font-weight-regular: 400;
-    --font-weight-medium: 500;
-    --font-weight-semibold: 600;
-    --font-weight-bold: 700;
+    /* Modular Scale (Perfect Fifth: 1.5) — base 18px */
+    --font-size-base: 1.125rem;       /* 18px */
+    --font-size-sm: 0.9375rem;        /* 15px */
+    --font-size-xs: 0.75rem;          /* 12px */
+    --font-size-lg: 1.375rem;         /* 22px */
+    --font-size-xl: 1.6875rem;        /* 27px */
+    --font-size-2xl: 2.25rem;         /* 36px */
+    --font-size-3xl: 2.8125rem;       /* 45px */
 
     /* Line Heights */
-    --line-height-tight: 1.2;
-    --line-height-normal: 1.5;
-    --line-height-relaxed: 1.6;
-    --line-height-loose: 1.8;
+    --lh-tight: 1.2;
+    --lh-normal: 1.5;
+    --lh-relaxed: 1.6;
+    --lh-loose: 1.7;
 
+    /* Baseline Spacing (multiples of 1.5rem) */
+    --baseline: 1.5rem;
+    --space-xs: 0.5rem;
+    --space-sm: 0.75rem;
+    --space-md: var(--baseline);              /* 1.5rem */
+    --space-lg: calc(var(--baseline) * 2);    /* 3rem */
+    --space-xl: calc(var(--baseline) * 4);    /* 6rem */
 
-    /* ===== Spacing Scale ===== */
+    /* Layout */
+    --measure: 70ch;
+    --measure-narrow: 60ch;
+    --measure-wide: 80ch;
 
-    --space-xs: 0.25rem;    /* 4px */
-    --space-sm: 0.5rem;     /* 8px */
-    --space-md: 1rem;       /* 16px */
-    --space-lg: 1.5rem;     /* 24px */
-    --space-xl: 2rem;       /* 32px */
-    --space-2xl: 3rem;      /* 48px */
-    --space-3xl: 4rem;      /* 64px */
-    --space-4xl: 6rem;      /* 96px */
+    /* ===== Colors — Dark Mode (default) ===== */
+    --color-bg: #1a1a1a;
+    --color-text: #e5e5e5;
+    --color-text-secondary: #999999;
+    --color-link: #6699ff;
+    --color-link-hover: #99bbff;
+    --color-border: #333333;
+    --color-code-bg: #2a2a2a;
 
-
-    /* ===== Layout ===== */
-
-    --container-max-width: 1200px;
-    --container-padding: var(--space-lg);
-
-
-    /* ===== Border Radius ===== */
-
-    --border-radius-sm: 4px;
-    --border-radius-md: 8px;
-    --border-radius-lg: 12px;
-    --border-radius-full: 9999px;
-
-
-    /* ===== Shadows ===== */
-
-    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
-    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
-    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
-    --shadow-glow: 0 0 20px rgba(0, 217, 255, 0.3);
-
-
-    /* ===== Transitions ===== */
-
+    /* Transitions */
     --transition-fast: 150ms ease;
-    --transition-base: 250ms ease;
-    --transition-slow: 350ms ease;
-
-
-    /* ===== Breakpoints (for reference in JS) ===== */
-
-    --breakpoint-sm: 640px;
-    --breakpoint-md: 768px;
-    --breakpoint-lg: 1024px;
-    --breakpoint-xl: 1280px;
 }
 
 /* ================================
@@ -114,31 +56,11 @@
    ================================ */
 
 :root[data-theme="light"] {
-    /* Background Colors */
-    --color-bg-primary: #ffffff;
-    --color-bg-secondary: #f8f9fa;
-    --color-bg-tertiary: #e9ecef;
-
-    /* Text Colors */
-    --color-text-primary: #1a1a1a;
-    --color-text-secondary: #4a4a4a;
-    --color-text-muted: #6c757d;
-
-    /* Accent Colors */
-    --color-accent-primary: #0066cc;
-    --color-accent-secondary: #6c2bd9;
-    --color-accent-tertiary: #059669;
-    --color-accent-warning: #d97706;
-
-    /* Semantic Colors */
-    --color-link: var(--color-accent-primary);
-    --color-link-hover: #0052a3;
-    --color-border: #dee2e6;
-    --color-code-bg: #f1f3f5;
-
-    /* Shadows */
-    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
-    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
-    --shadow-glow: 0 0 20px rgba(0, 102, 204, 0.15);
+    --color-bg: #ffffff;
+    --color-text: #222222;
+    --color-text-secondary: #666666;
+    --color-link: #0066cc;
+    --color-link-hover: #004499;
+    --color-border: #e5e5e5;
+    --color-code-bg: #f5f5f5;
 }

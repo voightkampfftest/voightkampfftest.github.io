@@ -55,19 +55,13 @@ export function initNavigation() {
             const targetSection = document.querySelector(targetId);
 
             if (targetSection) {
-                const navHeight = nav.offsetHeight;
-                const targetPosition = targetSection.offsetTop - navHeight;
-
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
+                targetSection.scrollIntoView({ behavior: 'smooth' });
             }
         });
     });
 
     // ===== Active Section Detection =====
-    const sections = document.querySelectorAll('section[id], header[id]');
+    const sections = document.querySelectorAll('section[id]');
 
     const observerOptions = {
         root: null,
@@ -95,35 +89,4 @@ export function initNavigation() {
     sections.forEach(section => {
         observer.observe(section);
     });
-
-    // ===== Hide/Show Navigation on Scroll (Optional) =====
-    let lastScroll = 0;
-    let scrollTimeout;
-
-    window.addEventListener('scroll', () => {
-        clearTimeout(scrollTimeout);
-
-        scrollTimeout = setTimeout(() => {
-            const currentScroll = window.pageYOffset;
-
-            // Don't hide nav if at top of page
-            if (currentScroll <= 0) {
-                nav.style.transform = 'translateY(0)';
-                return;
-            }
-
-            // Hide on scroll down, show on scroll up
-            if (currentScroll > lastScroll && currentScroll > 100) {
-                // Scrolling down
-                nav.style.transform = 'translateY(-100%)';
-            } else {
-                // Scrolling up
-                nav.style.transform = 'translateY(0)';
-            }
-
-            lastScroll = currentScroll;
-        }, 10);
-    });
-
-    console.log('Navigation initialized ✓');
 }

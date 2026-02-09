@@ -238,12 +238,6 @@ function applyLanguage(lang) {
         }
     });
 
-    // Update data-text for terminal animation
-    const heroSubtitle = document.querySelector('.typing-line[data-i18n="hero.subtitle"]');
-    if (heroSubtitle && dict.hero.subtitle) {
-        heroSubtitle.setAttribute('data-text', dict.hero.subtitle);
-    }
-
     // Update html lang attribute
     document.documentElement.lang = lang;
 }
